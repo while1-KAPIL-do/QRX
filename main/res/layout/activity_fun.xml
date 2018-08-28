@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_fun"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    tools:context="com.fundu.kapil.qrscanner.FunActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fun with QR"
+                android:textSize="30sp"
+                android:paddingTop="30dp"
+                android:textStyle="bold"
+                android:textColor="@color/colorEndBlue"
+                android:fontFamily="sans-serif-smallcaps" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="3"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:src="@drawable/ic_chevron_left_black_24dp"
+                    android:rotation="0"
+                    android:layout_marginTop="200dp"
+                    android:id="@+id/left_arrow_tv"
+                    android:visibility="visible"
+                    android:layout_width="30sp"
+                    android:layout_height="50sp"/>
+
+                <android.support.v4.view.ViewPager
+                    android:layout_width="320dp"
+                    android:layout_height="543dp"
+                    android:layout_weight="0.08"
+                    android:id="@+id/viewpager" />
+                <ImageView
+                    android:src="@drawable/ic_chevron_right_black_24dp"
+                    android:rotation="0"
+                    android:layout_marginTop="200dp"
+                    android:id="@+id/right_arrow_tv"
+                    android:visibility="visible"
+                    android:layout_width="30sp"
+                    android:layout_height="50sp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

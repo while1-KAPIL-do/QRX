@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:gravity="center_horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:weightSum="3"
+            android:gravity="center_horizontal"
+            android:background="@drawable/upper_rounded_container"
+            android:orientation="vertical">
+            <TextView
+                android:layout_height="40dp"
+                android:layout_marginTop="40dp"
+
+                android:layout_width="wrap_content"
+                android:textSize="26sp"
+                android:fontFamily="sans-serif-smallcaps"
+                android:id="@+id/img_name_tv"
+                android:textStyle="normal|bold"
+                android:textAllCaps="false"
+                android:textAlignment="center"/>
+
+            <ImageView
+                android:layout_marginTop="20dp"
+                android:layout_height="180dp"
+
+                android:layout_width="250dp"
+                app:srcCompat="@mipmap/f1"
+                android:id="@+id/imageView" />
+            <LinearLayout
+                android:layout_width="280dp"
+                android:layout_height="270dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/img_abt_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="40sp"
+                    android:textSize="18sp"
+                    android:textColor="@color/cardview_light_background"
+                    android:drawableBottom="@color/colorAccent"
+                    android:textAlignment="center"
+                    android:textStyle="normal|italic"
+                    android:fontFamily="casual" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+</LinearLayout>

@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_upcomming_feature"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.fundu.kapil.qrscanner.UpcommingFeatureActivity"
+    tools:context="com.frazycrazy.kappu.qrx.UpcommingFeatureActivity"
     android:background="@color/colorEndBlue">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin"
+
             android:orientation="vertical"
-            android:gravity="center_horizontal">
+            android:gravity="center_horizontal"
+            tools:ignore="ScrollViewSize">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -27,7 +27,8 @@
                 android:paddingTop="30dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorGrayLight"
-                android:fontFamily="sans-serif-smallcaps" />
+                android:fontFamily="sans-serif-smallcaps"
+                tools:ignore="HardcodedText" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -43,22 +44,34 @@
                     android:id="@+id/left_arrow_tv"
                     android:visibility="visible"
                     android:layout_width="20sp"
-                    android:layout_height="30sp"/>
+                    android:layout_height="30sp"
+                    tools:ignore="ContentDescription,VectorDrawableCompat" />
 
                 <android.support.v4.view.ViewPager
                     android:layout_width="300dp"
                     android:layout_height="500dp"
                     android:layout_weight="0.08"
-                    android:id="@+id/viewpager" />
+                    android:id="@+id/viewpager"
+                    tools:ignore="InefficientWeight" />
                 <ImageView
-                    android:src="@drawable/ic_chevron_right_black_24dp"
+                    app:srcCompat="@drawable/ic_chevron_right_black_24dp"
                     android:rotation="0"
                     android:layout_marginTop="100dp"
                     android:id="@+id/right_arrow_tv"
                     android:visibility="visible"
                     android:layout_width="20sp"
-                    android:layout_height="30sp"/>
+                    android:layout_height="30sp"
+                    tools:ignore="ContentDescription" />
             </LinearLayout>
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adview_b2"
+                android:layout_marginTop="-80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/app_1_banner_2" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

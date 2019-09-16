@@ -1,23 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_about_author"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fundu.kapil.qrscanner.AboutAuthorActivity"
+    tools:context="com.frazycrazy.kappu.qrx.AboutAuthorActivity"
     android:background="@color/colorPrimary">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin"
             android:orientation="vertical"
-            android:background="@color/colorPrimary">
+            android:background="@color/colorPrimary"
+            tools:ignore="ScrollViewSize">
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="305dp">
@@ -26,23 +25,39 @@
                     android:layout_height="260dp"
                     android:orientation="vertical"
                     android:background="@drawable/gradientbackground">
-                    <ImageView
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
-                        android:src="@mipmap/authordp"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="50dp" />
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/btn_info"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="50dp"
+                        android:visibility="visible"
+                        app:cardCornerRadius="25dp"
+                      >
+                        <TextView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                           android:gravity="center"
+                            android:text=" { } "
+                            android:textAlignment="center"
+                            android:textSize="21sp"
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
+                    </android.support.v7.widget.CardView>
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Kapil Agrawal"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="sans-serif-condensed"
+                        android:paddingTop="10dp"
+                        android:text="Kapil Agarwal"
+                        android:textAlignment="center"
                         android:textColor="@color/colorGrayLight"
                         android:textSize="21sp"
                         android:textStyle="normal|bold"
-                        android:textAlignment="center"
-                        android:fontFamily="sans-serif-condensed"
-                        android:layout_gravity="center_horizontal"
-                        android:paddingTop="10dp"/>
+                        tools:ignore="HardcodedText" />
                 </LinearLayout>
                 <android.support.v7.widget.CardView
                     android:layout_width="300dp"
@@ -54,20 +69,23 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:weightSum="3"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        tools:ignore="DisableBaselineAlignment">
                         <LinearLayout
                             android:gravity="center"
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
-                            android:onClick="btn_linkedin">
+                            android:onClick="btn_linkedin"
+                            tools:ignore="UseCompoundDrawables">
                             <ImageView
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:text="photos"
                                 android:textSize="20sp"
-                                android:src="@mipmap/linkedin"/>
+                                android:src="@drawable/linkedin"
+                                tools:ignore="ContentDescription,HardcodedText" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -76,7 +94,8 @@
                                 android:textSize="14sp"
                                 android:textStyle="bold"
                                 android:layout_marginBottom="-10dp"
-                                android:textColor="@color/colorEndBlue"/>
+                                android:textColor="@color/colorEndBlue"
+                                tools:ignore="HardcodedText" />
                         </LinearLayout>
                         <LinearLayout
                             android:gravity="center"
@@ -84,13 +103,15 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
-                            android:onClick="btn_blog">
+                            android:onClick="btn_blog"
+                            tools:ignore="UseCompoundDrawables">
                             <ImageView
                                 android:layout_width="40dp"
                                 android:layout_height="40dp"
                                 android:text="photos"
                                 android:textSize="20sp"
-                                android:src="@mipmap/blogger"/>
+                                android:src="@drawable/blogger"
+                                tools:ignore="ContentDescription,HardcodedText" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -99,7 +120,8 @@
                                 android:textSize="14sp"
                                 android:textStyle="bold"
                                 android:layout_marginBottom="-10dp"
-                                android:textColor="@color/colorEndBlue"/>
+                                android:textColor="@color/colorEndBlue"
+                                tools:ignore="HardcodedText" />
                         </LinearLayout>
                         <LinearLayout
                             android:gravity="center"
@@ -107,13 +129,15 @@
                             android:layout_weight="1"
                             android:layout_height="match_parent"
                             android:orientation="vertical"
-                            android:onClick="btn_yt">
+                            android:onClick="btn_yt"
+                            tools:ignore="UseCompoundDrawables">
                             <ImageView
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
                                 android:text="photos"
                                 android:textSize="20sp"
-                                android:src="@mipmap/yt"/>
+                                android:src="@drawable/yt"
+                                tools:ignore="ContentDescription,HardcodedText" />
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -121,7 +145,8 @@
                                 android:paddingTop="0dp"
                                 android:textSize="14sp"
                                 android:textStyle="bold"
-                                android:textColor="@color/colorEndBlue"/>
+                                android:textColor="@color/colorEndBlue"
+                                tools:ignore="HardcodedText" />
                         </LinearLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -133,9 +158,55 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:layout_gravity="center"
-                android:layout_marginTop="40dp"
                 android:paddingBottom="40dp"
-                android:layout_centerHorizontal="true">
+                android:layout_centerHorizontal="true"
+                tools:ignore="ObsoleteLayoutParam,RtlHardcoded">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:paddingLeft="25dp"
+                    android:gravity="center"
+                    android:paddingTop="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:onClick="btn_fbc"
+                    tools:ignore="RtlSymmetry,UseCompoundDrawables">
+                    <ImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        app:srcCompat="@drawable/ic_question_answer_black_24dp"
+                        tools:ignore="ContentDescription" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="20dp"
+                        android:text="Our facebook Community"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:paddingTop="8dp"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:paddingLeft="25dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="10dp"
+                    tools:ignore="RtlSymmetry">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:paddingTop="10dp"
+                        android:text="-------- Feed Back --------"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorEndBlue"
+                        android:textSize="21sp"
+                        android:textStyle="normal|bold"
+                        tools:ignore="HardcodedText" />
+                </LinearLayout>
 
                 <LinearLayout
                     android:orientation="horizontal"
@@ -143,62 +214,33 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:onClick="btn_gmail"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    tools:ignore="RtlSymmetry,UseCompoundDrawables">
                     <ImageView
                         android:layout_width="36dp"
                         android:layout_height="36dp"
-                        android:src="@drawable/ic_local_post_office_black_24dp"/>
+                        app:srcCompat="@drawable/ic_local_post_office_black_24dp"
+                        tools:ignore="ContentDescription" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="14dp"
-                        android:text="agrawalkapil543@gmail.com"
+                        android:text="appbykapil@gmail.com"
                         android:textSize="18sp"
                         android:textStyle="bold"
-                        android:paddingTop="6dp"/>
+                        android:paddingTop="6dp"
+                        tools:ignore="HardcodedText" />
                 </LinearLayout>
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:paddingLeft="25dp"
-                    android:paddingTop="30dp"
+                <com.google.android.gms.ads.AdView
+                    xmlns:ads="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/adview_b3"
                     android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:onClick="btn_dial">
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:src="@drawable/ic_phone_android_black_24dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="20dp"
-                        android:text="+91 7772022364"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:paddingTop="8dp"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:orientation="horizontal"
-                    android:paddingLeft="25dp"
-                    android:paddingTop="30dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:onClick="btn_fbc">
-                    <ImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:src="@drawable/ic_question_answer_black_24dp"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:paddingLeft="20dp"
-                        android:text="facebook Community"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:paddingTop="8dp"/>
-                </LinearLayout>
+                    android:layout_gravity="center_horizontal"
+                    ads:adSize="BANNER"
+                    ads:adUnitId="@string/app_1_banner_3" />
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

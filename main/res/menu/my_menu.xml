@@ -3,15 +3,23 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item android:title="Fun with QR"
+        android:icon="@drawable/ic_toys_black_24dp"
         android:id="@+id/item1" />
 
     <item android:title="Features"
+        android:icon="@drawable/ic_star_black_24dp"
         android:id="@+id/item2"/>
 
     <item android:title="Upcoming Features"
+        android:icon="@drawable/ic_star_border_black_24dp"
         android:id="@+id/item3"/>
 
-    <item android:title="Author"
+    <item android:title="Share this app"
+        android:icon="@drawable/ic_share_black_24dp"
+        android:id="@+id/item5"/>
+
+    <item android:title="About"
+        android:icon="@drawable/ic_info_black_24dp"
         android:id="@+id/item4"/>
 
 </menu>

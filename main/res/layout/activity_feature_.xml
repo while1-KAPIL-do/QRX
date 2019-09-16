@@ -1,25 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_feature_"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorEndBlue"
-    tools:context="com.fundu.kapil.qrscanner.Feature_Activity">
+    tools:context="com.frazycrazy.kappu.qrx.Feature_Activity">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
 
-            android:paddingBottom="@dimen/activity_vertical_margin"
-            android:paddingLeft="@dimen/activity_horizontal_margin"
-            android:paddingRight="@dimen/activity_horizontal_margin"
-            android:paddingTop="@dimen/activity_vertical_margin"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:weightSum="3">
+            android:weightSum="3"
+            tools:ignore="ScrollViewSize">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -29,7 +28,8 @@
                 android:paddingTop="30dp"
                 android:textStyle="bold"
                 android:textColor="@color/colorGrayLight"
-                android:fontFamily="sans-serif-smallcaps" />
+                android:fontFamily="sans-serif-smallcaps"
+                tools:ignore="HardcodedText" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -41,107 +41,128 @@
 
 
                 <ImageView
-                    android:src="@drawable/ic_chevron_left_black_24dp"
+                    app:srcCompat="@drawable/ic_chevron_left_black_24dp"
                     android:rotation="0"
                     android:layout_marginTop="100dp"
                     android:id="@+id/left_arrow_tv"
                     android:visibility="visible"
                     android:layout_width="20sp"
-                    android:layout_height="30sp"/>
+                    android:layout_height="30sp"
+                    tools:ignore="ContentDescription" />
 
                 <android.support.v4.view.ViewPager
                     android:layout_width="300dp"
                     android:layout_height="260dp"
                     android:layout_weight="0.08"
-                    android:id="@+id/viewpager" />
+                    android:id="@+id/viewpager"
+                    tools:ignore="InefficientWeight" />
                 <ImageView
-                    android:src="@drawable/ic_chevron_right_black_24dp"
+                    app:srcCompat="@drawable/ic_chevron_right_black_24dp"
                     android:rotation="0"
                     android:layout_marginTop="100dp"
                     android:id="@+id/right_arrow_tv"
                     android:visibility="visible"
                     android:layout_width="20sp"
-                    android:layout_height="30sp"/>
+                    android:layout_height="30sp"
+                    tools:ignore="ContentDescription" />
         </LinearLayout>
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:gravity="left"
+                android:layout_gravity="center"
                 android:layout_marginLeft="-10dp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="40dp">
+                android:layout_marginBottom="40dp"
+                tools:ignore="RtlHardcoded">
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:weightSum="2"
-                    android:layout_marginTop="12dp">
+                    tools:ignore="UseCompoundDrawables">
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@mipmap/share"/>
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/ic_share_black_24dp"
+                        tools:ignore="ContentDescription" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Copy | Share"
                         android:textSize="18sp"
-                        android:paddingTop="15sp"
-                        android:paddingLeft="40sp"
+                        android:paddingLeft="50dp"
+                        android:layout_gravity="center"
                         android:textStyle="bold"
                         android:textColor="@color/colorGrayLight"
                         android:fontFamily="sans-serif-smallcaps"
                         android:id="@+id/textView"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        tools:ignore="HardcodedText,RtlCompat,RtlSymmetry" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:weightSum="2"
-                    android:layout_marginTop="12dp">
+                    tools:ignore="UseCompoundDrawables">
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@mipmap/brows"/>
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/ic_public_black_24dp"
+                        tools:ignore="ContentDescription" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="Search on WEB"
                         android:textSize="18sp"
-                        android:paddingTop="10sp"
-                        android:paddingLeft="40sp"
+                        android:paddingLeft="50dp"
+                        android:layout_gravity="center"
                         android:textStyle="bold"
                         android:textColor="@color/colorGrayLight"
                         android:fontFamily="sans-serif-smallcaps"
                         android:id="@+id/textView2"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        tools:ignore="HardcodedText,RtlCompat,RtlSymmetry" />
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:weightSum="2"
-                    android:layout_marginLeft="-8dp"
-                    android:layout_marginTop="5dp">
+                    tools:ignore="UseCompoundDrawables">
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
-                        android:src="@mipmap/info"/>
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/ic_extension_black_24dp"
+                        tools:ignore="ContentDescription" />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="App Info"
                         android:textSize="18sp"
-                        android:paddingTop="15sp"
-                        android:paddingLeft="48sp"
+                        android:paddingLeft="50dp"
+                        android:layout_gravity="center"
                         android:textStyle="bold"
                         android:textColor="@color/colorGrayLight"
                         android:fontFamily="sans-serif-smallcaps"
                         android:id="@+id/textView3"
-                        android:textAlignment="textStart" />
+                        android:textAlignment="textStart"
+                        tools:ignore="HardcodedText,RtlCompat,RtlSymmetry" />
                 </LinearLayout>
             </LinearLayout>
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adview_b1"
+                android:layout_marginTop="-25dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/app_1_banner_1" />
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

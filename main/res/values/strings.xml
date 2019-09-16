@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">QR-X</string>
+    <string name="app_name">QR X</string>
+
+
+    <string name="app_1_Id">ca-app-pub-2940445491035976~2773977272</string>
+    <string name="app_1_interstitial_1">ca-app-pub-2940445491035976/8971843673</string>
+    <string name="app_1_banner_1">ca-app-pub-2940445491035976/9861419365</string>
+    <string name="app_1_banner_2">ca-app-pub-2940445491035976/7084046933</string>
+    <string name="app_1_banner_3">ca-app-pub-2940445491035976/9722243597</string>
+    <string name="app_1_rewarded_1">ca-app-pub-2940445491035976/8241926375</string>
+
+
 </resources>
